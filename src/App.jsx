@@ -1,14 +1,12 @@
 import propTypes from 'prop-types';
 
 
-const Hello = (props) => {
-  const bornYear = () => {
-    const yearNow = new Date().getFullYear()
-    return yearNow - props.age
-  }
+const Hello = ({ name, age }) => {
+    const bornYear = () => new Date().getFullYear() - age
+  
   return (
     <div>
-      <p>Hello {props.name}, you are {props.age} years old</p>
+      <p>Hello {name}, you are {age} years old</p>
       <p>So you were probably born {bornYear()}</p>
     </div>
   )
