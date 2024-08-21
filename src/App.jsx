@@ -1,3 +1,6 @@
+import propTypes from 'prop-types';
+
+
 const Hello = (props) => {
   const bornYear = () => {
     const yearNow = new Date().getFullYear()
@@ -11,9 +14,14 @@ const Hello = (props) => {
   )
 }
 
+Hello.propTypes = {
+  name: propTypes.string,
+  age: propTypes.number,
+}
+
 const App = () => {
   const nimi = "Pekka"
-  const ika = 25 
+  const ika = 20 
 
   return (
     <div>
